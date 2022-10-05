@@ -1,7 +1,6 @@
 .manifestation {
   padding: 9rem 0;
   padding-bottom: 0;
-  background-color: rebeccapurple;
   &:last-child {
     padding-bottom: 10rem;
     @include respond(desktop) {
