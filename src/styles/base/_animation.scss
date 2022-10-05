@@ -1,0 +1,19 @@
+.navbar__checkbox {
+  &:checked ~ .navbar__hamburger span:nth-child(1) {
+    transform: rotate(135deg);
+  }
+  &:checked ~ .navbar__hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  &:checked ~ .navbar__hamburger span:nth-child(3) {
+    position: absolute;
+    transform: rotate(45deg);
+  }
+
+  &:checked ~ .navbar__desktop__container {
+    right: 0;
+    @include respond(tablet) {
+      right: 0;
+    }
+  }
+}

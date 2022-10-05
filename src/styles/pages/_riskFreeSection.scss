@@ -1,0 +1,104 @@
+.risk-free__section {
+  color: var(--top-header-background-color);
+  background: var(--color-secondary-light);
+  text-transform: capitalize;
+  padding: 7rem 0;
+  @include respond(desktop) {
+    padding: 5rem 0;
+  }
+  @include respond(tablet) {
+    padding: 9rem 0;
+  }
+  .risk-free {
+    height: 20rem;
+    position: relative;
+    background-color: var(--background-color);
+    @include flex(center, _, _);
+    padding: 0 4rem;
+    border-radius: 14px;
+    box-shadow: 0 8.9rem 9.7rem rgb(0 0 0 / 5%);
+    @include respond(desktop) {
+      padding-right: 2.5rem;
+    }
+    @include respond(second_desktop) {
+      height: 24.5rem;
+      @include flex(center, space-between, _);
+      flex-direction: column;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    @include respond(tablet) {
+      height: auto;
+      row-gap: 1.5rem;
+    }
+
+    &__image {
+      margin-right: 5rem;
+      margin-top: -10rem;
+      @include respond(second_desktop) {
+        margin-top: -5rem;
+        margin-right: 0;
+      }
+
+      @include respond(tablet) {
+        margin-top: -5rem;
+        margin-right: 0;
+        width: 15rem;
+        height: 15rem;
+      }
+    }
+
+    &__container {
+      @include flex(center, space-between, _);
+      width: 100%;
+      @include respond(tablet) {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 2rem;
+      }
+    }
+
+    &__texts {
+      width: auto;
+      @include flexCol(1rem);
+      margin-right: auto;
+      @include respond(tablet) {
+        margin-right: 0;
+      }
+    }
+    &__heading {
+      font-size: 3.5rem;
+      @include respond(second_desktop) {
+        font-size: 2.8rem;
+      }
+    }
+
+    &__trial {
+      @include flex(center, _, 3rem);
+      font-size: 1.7rem;
+      @include respond(tablet) {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 1rem;
+      }
+      div {
+        @include flex(center, _, 0.5rem);
+      }
+    }
+
+    &__button {
+      @include btn_body;
+      width: 17rem;
+      background-color: rgba(105, 138, 255, 1);
+      box-shadow: 0.5px 1.4rem 3.4rem 0 rgba(105, 138, 255, 0.1);
+      @include respond(tablet) {
+        width: 26rem;
+        box-shadow: none;
+      }
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}

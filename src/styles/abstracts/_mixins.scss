@@ -1,0 +1,56 @@
+// Media Query Manager
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    @media (max-width: 80em) {
+      // 1279px / 16px = 80em
+      @content;
+    }
+  }
+
+  @if $breakpoint == second_desktop {
+    @media (max-width: 64em) {
+      // 1023px / 16px = 64em
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: 48em) {
+      // 767px / 16px = 48em
+      @content;
+    }
+  }
+}
+
+@mixin btn_body {
+  background-color: var(--2nd-header-color-red);
+  color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 14px;
+  box-shadow: 0 14px 34px 0 rgba(251, 0, 35, 0.2);
+  width: 17rem;
+  padding: 1.3rem 0;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: all 2s;
+  text-decoration: none;
+  @include respond(tablet) {
+    box-shadow: none;
+  }
+}
+
+@mixin flex($ai, $jc, $gap) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  gap: $gap;
+}
+
+@mixin flexCol($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

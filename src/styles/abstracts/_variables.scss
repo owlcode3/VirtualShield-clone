@@ -1,0 +1,23 @@
+:root {
+  // COLOR
+  --background-color: rgb(255, 255, 255);
+  --top-header-background-color: rgb(21, 21, 23);
+  --top-header-text-color-grey: rgb(176, 181, 194);
+  --color-grey-light-2: rgba(176, 181, 194, 0.2);
+  --3rd-header-background-color: rgb(244, 245, 246);
+  --top-header-text-color-red: rgb(244, 0, 34);
+  --2nd-header-color-red: rgb(244, 0, 34);
+  --color-tertiary: rgb(105, 138, 255);
+  --color-tertiary-2: rgba(105, 138, 255, 0.2);
+  --color-grey-light: rgba(245, 246, 249, 1);
+  --color-secondary-light: #f5f6f9;
+  --color-primary: rgb(26, 178, 51);
+  --color-footer: rgb(140, 140, 140);
+
+  // FONT
+  --default-font-size: 1.6rem;
+
+  // BOX-SHADOW
+  --box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+  --box-shadow-secondary: 0 1.4rem 8.4rem rgba(0, 0, 0, 0.15);
+}

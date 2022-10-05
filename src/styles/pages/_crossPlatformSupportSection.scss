@@ -1,0 +1,140 @@
+.cps__section {
+  padding: 5rem 0;
+  @include respond(second_desktop) {
+    padding-top: 0;
+  }
+}
+
+.cps {
+  color: var(--top-header-background-color);
+  @include flexCol(5rem);
+  align-items: center;
+  @include respond(tablet) {
+    row-gap: 3rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  &__container {
+    @include flex(center, _, 8rem);
+    @include respond(second_desktop) {
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+    @include respond(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__available {
+    font-size: 1.6rem;
+    color: var(--top-header-text-color-grey);
+  }
+
+  &__lists {
+    position: relative;
+    @include flex(center, center, 5rem);
+    list-style: none;
+    @include respond(tablet) {
+      width: 100%;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  }
+
+  &__list {
+    @include respond(tablet) {
+      width: 100%;
+      background-color: var(--color-grey-light-2);
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      @include flex(center, space-between, 0);
+    }
+
+    &:hover .cps__link {
+      @include respond(tablet) {
+        color: var(--color-tertiary);
+      }
+    }
+
+    &:hover .cps__icon {
+      @include respond(tablet) {
+        fill: var(--color-tertiary);
+      }
+    }
+    &:not(:last-child)::after {
+      content: "";
+      display: block;
+      width: 0.1rem;
+      height: 4rem;
+      background-color: var(--top-header-text-color-grey);
+      position: absolute;
+      top: 0;
+      @include respond(tablet) {
+        display: none;
+      }
+    }
+
+    &:nth-child(1)::after {
+      content: "";
+      left: 9.5rem;
+    }
+    &:nth-child(2)::after {
+      content: "";
+      left: 25.5rem;
+    }
+    &:nth-child(3)::after {
+      content: "";
+      right: 25rem;
+    }
+    &:nth-child(4)::after {
+      content: "";
+      right: 11rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      @include flex(center, _, 1rem);
+    }
+    &--color {
+      color: var(--top-header-text-color-grey);
+    }
+    &:hover {
+      color: var(--color-tertiary);
+    }
+  }
+
+  &__icon {
+    display: block;
+    height: 4rem;
+    @include respond(tablet) {
+      height: 3rem;
+    }
+  }
+
+  &__icon-2 {
+    display: none;
+    @include respond(tablet) {
+      display: block;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  &__name,
+  &__icon {
+    transition: all 0.5s;
+  }
+}

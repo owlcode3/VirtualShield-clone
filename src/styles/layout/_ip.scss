@@ -1,0 +1,14 @@
+.ip {
+  background-color: var(--top-header-background-color);
+  padding: 0.9rem 0;
+  @include flex(_, center, 3rem);
+  transition: all 0.5s;
+  font-weight: 600;
+  font-size: 1.4rem;
+
+  &__hide {
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.grey {
+  color: var(--top-header-text-color-grey);
+}
+
+.green {
+  color: #1ab233;
+}
+
+.red {
+  color: var(--top-header-text-color-red);
+}
+
+.ml {
+  margin-left: 0.5rem;
+}
+
+.explore--bg {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 31rem;
+    height: 4rem;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    background-color: var(--color-grey-light-2);
+    border-radius: 8px;
+    @include respond(second_desktop) {
+      width: 24rem;
+      bottom: 1.2rem;
+      right: 1rem;
+    }
+    @include respond(tablet) {
+      width: 97%;
+      bottom: 1.2rem;
+      right: 1rem;
+    }
+  }
+}
+
+.active-background {
+  background-color: var(--background-color);
+  border-radius: 14px;
+  padding: 0.8rem 1.5rem;
+}
+
+.pos-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 0;
+  box-shadow: var(--box-shadow-secondary);
+  background-color: var(--background-color);
+
+  &-2 {
+    position: fixed;
+    transform: translateY(-40px);
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+.btn__long {
+  @include btn_body;
+  width: 18rem;
+  display: none;
+  padding: 1.4rem 0;
+  @include respond(desktop) {
+    display: flex;
+  }
+  &:hover {
+    box-shadow: none;
+    cursor: pointer;
+  }
+}
+
+.btn__animate {
+  @include btn_body;
+  transition: none;
+  visibility: hidden;
+  padding: 1.6rem 0;
+  @include respond(tablet) {
+    width: 100%;
+  }
+}
+
+.learn-more {
+  @include btn_body;
+  padding: 1.3rem;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  width: 15rem;
+  color: rgba(251, 0, 35, 1);
+  background-color: rgba(251, 0, 35, 0.1);
+  box-shadow: none;
+  @include respond(tablet) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,203 @@
+.card {
+  background-color: var(--background-color);
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-radius: 5px;
+  width: 50%;
+  padding: 3.7rem 0 2rem;
+  @include flexCol(4rem);
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  @include respond(desktop) {
+    @include flex(center, space-between, _);
+    flex-direction: row;
+    width: 100%;
+    padding-left: 1.5rem;
+  }
+  @include respond(tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3rem;
+    padding: 3rem;
+  }
+
+  &__header {
+    @include respond(desktop) {
+      @include flex(center, _, _);
+      width: 33.3%;
+    }
+    @include respond(tablet) {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    visibility: hidden;
+    background: var(--2nd-header-color-red);
+    width: 6.8rem;
+    height: 6.8rem;
+    border-radius: 18px;
+    @include flex(center, center, _);
+    margin: 0 auto 2.6rem;
+    @include respond(desktop) {
+      height: 8rem;
+      width: 8rem;
+      box-shadow: var(--box-shadow-secondary);
+      margin: 0 1.2rem 0 0;
+      padding: 2rem;
+    }
+  }
+
+  &__svg {
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    @include respond(desktop) {
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  &__texts {
+    h3 {
+      font-size: 1.6rem;
+      @include respond(desktop) {
+        font-size: 1.4rem;
+      }
+
+      @include respond(tablet) {
+        text-align: left;
+      }
+      span {
+        color: var(--top-header-text-color-grey);
+      }
+    }
+
+    h1 {
+      font-size: 4rem;
+      @include respond(desktop) {
+        font-size: 3rem;
+        text-align: left;
+        line-height: 4rem;
+      }
+      span {
+        font-size: 2.5rem;
+        color: var(--top-header-text-color-grey);
+      }
+    }
+
+    p {
+      color: var(--top-header-text-color-grey);
+      font-size: 1.2rem;
+      font-weight: 500;
+      @include respond(desktop) {
+        line-height: 1.9rem;
+      }
+      span {
+        color: var(--background-color);
+        display: inline-block;
+        background-color: var(--color-primary);
+        border-radius: 4px;
+        padding: 0.2rem;
+        margin-left: 0.6rem;
+        @include respond(desktop) {
+          padding: 0.1rem;
+          font-size: 1.2rem;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+
+  &__lists {
+    @include flexCol(1.8rem);
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    font-weight: 600;
+    width: 100%;
+    @include respond(desktop) {
+      align-items: flex-start;
+      row-gap: 0.5rem;
+      font-size: 1.3rem;
+      width: 33.3%;
+      padding-left: 2rem;
+    }
+
+    @include respond(tablet) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+    @include flex(center, center, 2rem);
+    border-bottom: 1px solid var(--color-grey-light-2);
+    padding-bottom: 1rem;
+    @include respond(desktop) {
+      border: none;
+      padding-bottom: 0;
+      column-gap: 0.6rem;
+    }
+    &-no-display {
+      display: none;
+      @include respond(desktop) {
+        display: flex;
+      }
+    }
+    &__paragraph {
+      display: none;
+      @include respond(desktop) {
+        display: block;
+      }
+    }
+  }
+
+  &__icons {
+    display: block;
+    @include respond(desktop) {
+      width: 2.2rem;
+    }
+  }
+
+  &__button-container {
+    @include flexCol(1.5rem);
+    align-items: center;
+    @include respond(desktop) {
+      width: 33.3%;
+      padding: 0 3.8rem;
+    }
+    @include respond(second_desktop) {
+      width: 40%;
+      padding: 0;
+    }
+    @include respond(tablet) {
+      width: 97%;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--top-header-text-color-grey);
+    }
+  }
+
+  &__button {
+    @include btn_body;
+    width: 30rem;
+    @include respond(desktop) {
+      width: 16rem;
+    }
+    @include respond(tablet) {
+      width: 100%;
+    }
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &__list-none {
+    @include respond(desktop) {
+      display: none;
+    }
+  }
+}

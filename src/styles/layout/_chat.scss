@@ -1,0 +1,54 @@
+.chat {
+  visibility: hidden;
+  background-color: var(--2nd-header-color-red);
+  color: var(--background-color);
+  height: 6rem;
+  width: 6rem;
+  @include flex(center, center, _);
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  cursor: pointer;
+  border-radius: 3.4rem 0.8rem 3.4rem 3.4rem;
+  z-index: 9995;
+  @include respond(tablet) {
+    box-shadow: var(--box-shadow-secondary);
+  }
+
+  &__icon {
+    border-radius: 0.6rem 0.6rem 0.6rem 0.2rem;
+    height: 1.7rem;
+    left: 32%;
+    position: absolute;
+    top: 37%;
+    width: 38%;
+    background-color: var(--background-color);
+
+    &::before,
+    &::after {
+      background-color: var(--2nd-header-color-red);
+    }
+
+    &::before {
+      border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+      border-top: 0.5rem;
+      content: "";
+      height: 0.2rem;
+      left: 0.4rem;
+      position: absolute;
+      top: 0.5rem;
+      width: 65%;
+    }
+
+    &::after {
+      border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
+      border-top: 0.5rem;
+      content: "";
+      height: 0.2rem;
+      left: 0.4rem;
+      position: absolute;
+      top: 1rem;
+      width: 44%;
+    }
+  }
+}

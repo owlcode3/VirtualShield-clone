@@ -1,0 +1,415 @@
+.explore__section {
+  color: var(--top-header-background-color);
+  background-color: var(--color-secondary-light);
+  padding: 10rem 0;
+  @include respond(tablet) {
+    padding: 5rem 0;
+  }
+}
+
+.explore {
+  @include flex(flex-start, space-between, _);
+  @include respond(desktop) {
+    @include flexCol(_);
+  }
+
+  &__left-side {
+    width: 37.7%;
+    @include respond(desktop) {
+      width: 100%;
+    }
+
+    @include respond(tablet) {
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+    @include respond(tablet) {
+      font-size: 1.6rem;
+    }
+    h1 {
+      @include flexCol(_);
+      line-height: 5rem;
+      margin-bottom: 3rem;
+      @include respond(desktop) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      text-transform: initial;
+      word-spacing: 0.1rem;
+      max-width: 25rem;
+      color: var(--top-header-text-color-grey);
+      @include respond(desktop) {
+        display: none;
+      }
+    }
+    span:nth-child(2) {
+      color: var(--top-header-text-color-red);
+    }
+  }
+
+  &__users-form {
+    margin-bottom: 8rem;
+    @include respond(desktop) {
+      @include flex(flex-start, space-between, _);
+      padding-bottom: 2.2rem;
+      margin-bottom: 2.8rem;
+    }
+    @include respond(tablet) {
+      position: relative;
+      width: 100%;
+      margin-bottom: 6.3rem;
+      padding-bottom: 0;
+      display: block;
+    }
+  }
+
+  &__option {
+    display: none;
+    @include respond(desktop) {
+      @include flexCol(4rem);
+      position: absolute;
+      right: 0;
+      width: 33.3rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 2rem;
+      border-radius: 10px;
+      text-transform: capitalize;
+      background-color: var(--background-color);
+      z-index: 2;
+    }
+    @include respond(second_desktop) {
+      width: 26rem;
+    }
+    @include respond(tablet) {
+      right: 0;
+      width: 100%;
+    }
+  }
+
+  &__open {
+    @include flex(center, space-between, 2rem);
+    @include respond(tablet) {
+      padding-right: 1rem;
+    }
+  }
+
+  &__years-1 {
+    span {
+      color: var(--background-color);
+      background-color: var(--color-tertiary);
+      border-radius: 4px;
+      padding: 0.2rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &__close {
+    @include flexCol(5rem);
+    list-style: none;
+    @include respond(tablet) {
+      text-align: left;
+    }
+  }
+
+  &__years-2 {
+    span {
+      background-color: var(--color-grey-light-2);
+      border-radius: 4px;
+      padding: 0.2rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &__open-icon {
+    cursor: pointer;
+    img {
+      transition: all 0.5s;
+    }
+  }
+
+  &__years {
+    span {
+      text-transform: lowercase;
+      font-weight: 500;
+    }
+
+    &--bb {
+      &:not(:last-child):after {
+        content: "";
+        position: absolute;
+        left: 0;
+        margin-top: 3rem;
+        width: 33.3rem;
+        height: 0.1rem;
+        display: block;
+        background-color: var(--color-grey-light-2);
+        @include respond(second_desktop) {
+          width: 26rem;
+          margin-top: 2rem;
+        }
+
+        @include respond(tablet) {
+          width: 100%;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  &__years-3 {
+    span {
+      color: var(--color-tertiary);
+      background-color: var(--color-tertiary-2);
+      border-radius: 4px;
+      padding: 0.2rem;
+      margin-left: 1rem;
+    }
+  }
+
+  &__coupon-option-2 {
+    @include flexCol(1rem);
+    padding-bottom: 1rem;
+  }
+
+  &__option-2 {
+    display: none;
+    @include respond(tablet) {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      background-color: var(--background-color);
+      padding: 2rem;
+      padding-bottom: 4rem;
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+
+  &__option-2-child {
+    @include flex(center, _, 1.4rem);
+    P {
+      font-weight: 500;
+      text-align: left;
+      font-size: 1.4rem;
+      color: var(--top-header-text-color-grey);
+      line-height: 1.8rem;
+      span {
+        font-weight: 600;
+        color: rgba(120, 126, 141, 1);
+      }
+      span:nth-child(2) {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__option-2-icon {
+    @include flex(center, center, _);
+    background-color: var(--color-grey-light-2);
+    border-radius: 14px;
+    height: 6rem;
+    width: 9rem;
+  }
+
+  &__users {
+    @include flex(flex-start, _, 1rem);
+    font-size: 0.8rem;
+    @include respond(tablet) {
+      padding-bottom: 5rem;
+      justify-content: center;
+    }
+  }
+
+  &__personal {
+    h2 {
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: var(--top-header-text-color-grey);
+    }
+  }
+
+  &__switch {
+    position: relative;
+    &--body {
+      background: rgb(136, 136, 136);
+      height: 2.8rem;
+      width: 5.6rem;
+      margin: 0px;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+    &--over {
+      position: absolute;
+      top: 0.1rem;
+      height: 2.6rem;
+      width: 2.6rem;
+      border-radius: 50%;
+      outline: 0rem;
+      border: 0rem;
+      background: var(--background-color);
+      display: inline-block;
+      cursor: pointer;
+      transform: translateX(0.1rem);
+      transition: all 0.3s;
+      @include respond(tablet) {
+        left: 0;
+      }
+    }
+  }
+
+  &__lists {
+    list-style: none;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+    @include flexCol(1rem);
+    @include respond(desktop) {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include flex(center, _, 2rem);
+    border-bottom: 1px solid var(--background-color);
+    padding-bottom: 1rem;
+  }
+
+  &__icon {
+    background-color: var(--background-color);
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 8px;
+    @include flex(center, center, _);
+  }
+
+  &__coupon {
+    @include flexCol(2rem);
+    background-color: var(--background-color);
+    padding: 1.8rem;
+    width: 95%;
+    border-radius: 8px;
+    @include respond(desktop) {
+      margin-top: 4.3rem;
+      width: 98%;
+    }
+    @include respond(tablet) {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    @include flex(center, space-between, 1rem);
+    &--2 {
+      background-color: var(--color-grey-light-2);
+      width: 3.6rem;
+      height: 3rem;
+      border-radius: 8px;
+      @include flex(center, center, _);
+      cursor: pointer;
+      img {
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  &__input {
+    @include flex(center, _, 1rem);
+    transition: all 0.5s;
+    &--value {
+      width: 24rem;
+      background-color: var(--color-grey-light-2);
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      padding: 1.6rem 1.6rem;
+      &::-webkit-input-placeholder {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--btn {
+      @include btn_body;
+      border: none;
+      width: 14rem;
+      padding: 1.3rem 0;
+    }
+  }
+
+  &__right-side {
+    width: 62.3%;
+    @include respond(desktop) {
+      width: 100%;
+    }
+  }
+
+  &__lists-2 {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    list-style: none;
+    background-color: var(--color-secondary-light);
+    box-shadow: var(--box-shadow);
+    padding: 0 0 0 6rem;
+    height: 6rem;
+    margin-bottom: 1rem;
+    @include flex(center, _, 10rem);
+    @include respond(desktop) {
+      display: none;
+    }
+  }
+
+  &__list-2 {
+    @include flex(center, _, 1rem);
+
+    &:nth-child(3) {
+      background-color: var(--background-color);
+      padding: 1.4rem 5rem 1.3rem 5rem;
+      border-radius: 5px;
+    }
+    span {
+      font-size: 1.2rem;
+      color: var(--top-header-text-color-grey);
+    }
+
+    &:nth-child(1) span {
+      background-color: var(--color-grey-light-2);
+      border-radius: 4px;
+      padding: 0.2rem;
+    }
+    &:nth-child(2) span {
+      color: var(--color-tertiary);
+      background-color: var(--color-tertiary-2);
+      border-radius: 4px;
+      padding: 0.2rem;
+    }
+
+    &:nth-child(3) span {
+      color: var(--background-color);
+      background-color: var(--color-tertiary);
+      border-radius: 4px;
+      padding: 0.2rem;
+    }
+  }
+
+  &__cards {
+    @include flex(center, _, _);
+    @include respond(desktop) {
+      @include flexCol(1rem);
+    }
+  }
+}

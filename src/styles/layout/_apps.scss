@@ -1,0 +1,52 @@
+.apps__section {
+  padding: 1rem 0;
+  background-color: var(--color-grey-light-2);
+  margin-top: 14.4rem;
+  @include respond(desktop) {
+    margin-top: 11rem;
+  }
+}
+.apps {
+  padding: 0.2rem 0;
+  @include flex(center, center, 3.5rem);
+  list-style: none;
+
+  &__name {
+    @include respond(second_desktop) {
+      display: none;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+    }
+    &--color {
+      color: var(--top-header-text-color-grey);
+    }
+    &--android {
+      color: var(--color-tertiary);
+    }
+    &:hover {
+      color: var(--color-tertiary);
+    }
+  }
+
+  &__name,
+  &__icon {
+    transition: all 0.5s;
+  }
+
+  &__icon {
+    display: block;
+  }
+
+  &__list:hover &__icon {
+    fill: var(--color-tertiary);
+  }
+}

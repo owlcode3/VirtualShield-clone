@@ -1,0 +1,180 @@
+.hero__section {
+  color: var(--top-header-background-color);
+  padding: 0 0 5rem;
+  @include respond(tablet) {
+    padding: 0;
+  }
+}
+
+.hero {
+  padding: 5rem 5rem;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 5rem;
+  row-gap: 10rem;
+  @include respond(desktop) {
+    grid-template-columns: 48% 52%;
+    padding-top: 4rem;
+  }
+  @include respond(second_desktop) {
+    padding-left: 2.5rem;
+  }
+  @include respond(tablet) {
+    grid-template-columns: 100%;
+    row-gap: 5rem;
+    padding: 5.5rem 3rem 1.5rem;
+  }
+  &__heading {
+    visibility: hidden;
+    font-size: 2.8rem;
+    width: 36rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    @include respond(desktop) {
+      line-height: 1.4;
+      font-size: 2.3rem;
+      width: 30rem;
+    }
+    @include respond(second_desktop) {
+      font-size: 2.1rem;
+      width: 25rem;
+    }
+
+    span {
+      color: var(--color-tertiary);
+    }
+  }
+
+  &__paragraph {
+    visibility: hidden;
+    max-width: 40.5rem;
+    font-size: var(--default-font-size);
+    color: var(--top-header-text-color-grey);
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    @include respond(desktop) {
+      max-width: 36.5rem;
+    }
+    @include respond(tablet) {
+      max-width: 43rem;
+    }
+    span {
+      color: var(--top-header-background-color);
+    }
+  }
+
+  &__trial {
+    @include flex(_, _, 1.5rem);
+    display: flex;
+    margin-top: 3.5rem;
+    @include respond(tablet) {
+      justify-content: center;
+    }
+    &--ft {
+      @include flex(center, _, 0.5rem);
+      background-color: var(--color-grey-light);
+      border-radius: 14px;
+      padding: 0.8rem;
+    }
+    &--icon {
+      display: block;
+    }
+    &--text {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  &__texts {
+    @include respond(tablet) {
+      grid-row: 2;
+      justify-self: flex-end;
+    }
+  }
+
+  &__image__container {
+    @include respond(tablet) {
+      grid-row: 1;
+      justify-self: center;
+    }
+  }
+  &__image {
+    max-width: 100%;
+    height: auto;
+    @include respond(tablet) {
+      max-width: 100%;
+    }
+  }
+
+  &__qualities {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 3rem;
+    @include respond(second_desktop) {
+      width: 68%;
+      justify-self: start;
+      grid-template-columns: repeat(2, max-content);
+      justify-content: space-between;
+    }
+
+    @include respond(tablet) {
+      grid-template-columns: max-content;
+      row-gap: 2.5rem;
+      grid-row: 3;
+      width: auto;
+    }
+
+    .quality__container {
+      display: none;
+      justify-content: space-between;
+      @include respond(second_desktop) {
+        @include flexCol(2rem);
+      }
+
+      @include respond(tablet) {
+        display: none;
+      }
+      .hero__quality {
+        display: flex;
+      }
+    }
+  }
+
+  &__quality {
+    font-weight: 600;
+    @include flex(center, _, 1rem);
+    @include respond(second_desktop) {
+      display: none;
+    }
+    @include respond(tablet) {
+      display: flex;
+    }
+
+    &--icon {
+      @include flex(center, center, _);
+      border-radius: 100px;
+      width: 6rem;
+      height: 6rem;
+      &--1 {
+        background-color: rgba(255, 188, 56, 0.3);
+      }
+
+      &--2 {
+        background-color: rgba(171, 141, 255, 0.3);
+      }
+
+      &--3 {
+        background-color: rgba(150, 173, 255, 0.3);
+      }
+
+      &--4 {
+        background-color: rgba(187, 235, 149, 0.3);
+      }
+    }
+  }
+}
